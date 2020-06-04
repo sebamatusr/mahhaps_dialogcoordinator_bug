@@ -13,7 +13,7 @@ namespace MahappsBug.ViewModels
 {
     public class MAINVM : BaseViewModel
     {
-        public IDialogCoordinator dc { get;}
+        public IDialogCoordinator dc { get; }
         public IAsyncCommand OpenCW1 { get; set; }
 
         public MAINVM(IDialogCoordinator dc)

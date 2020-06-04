@@ -2,10 +2,12 @@
     x:Class="MahappsBug.CH3"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:MahappsBug"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:simpleChildWindow="http://metro.mahapps.com/winfx/xaml/simplechildwindow"
+    Dialog:DialogParticipation.Register="{Binding}"
     d:DesignHeight="450"
     d:DesignWidth="800"
     AllowMove="True"
@@ -16,6 +18,17 @@
     IsOpen="True"
     mc:Ignorable="d">
     <Grid>
-        <Button Command="{Binding OpenCW4}" Content="CH3" />
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Button
+            Grid.Row="0"
+            Command="{Binding OpenCW4}"
+            Content="CH3" />
+        <Button
+            Grid.Row="1"
+            Command="{Binding OpenDialog}"
+            Content="DIALOG" />
     </Grid>
 </simpleChildWindow:ChildWindow>
